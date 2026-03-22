@@ -1,13 +1,21 @@
-{% extends 'base.html %}
+{% extends 'base.html' %}
 
 {% block content %}
-<h2 class="success">Information saved successfully!</h2>
+<h1 class="success">Information saved successfully!</h1>
 
 <div>
-    <h3>Your FromSoft Games Data</h3>
-    <p><strong>Your name is {{name}}!</strong></p>
-    <p><strong>You have played {{fromAmount}} FromSoft games!</p>
-    <p><strong>Your favorite weapon is {{weapon}}!</strong></p>
-    <p><strong>Your preferred playstyle is {{playstyle}}!</strong></p>
+    <h2>Your FromSoft Games Data</h2>
+    <p>Your name is <strong>{{name}}</strong>.</p>
+    <p>You have played <strong>{{fromAmount}}</strong>, or <strong>{{fromNumber}}</strong> FromSoft games!</p>
+    <p>Your favorite weapon is <strong>{{weapon}}</strong>!</p>
+    <p>Your preferred playstyle is <strong>{{playstyle}}</strong>!</p>
+
+<a href="{{url_for('page3')}}">Take another survey?</a>
+</div>
+
+<div>
+<a href="{{url_for('home')}}">Or go back to Home!(There's nothing there....)</a>
+</div>
+
 
 {% endblock %}

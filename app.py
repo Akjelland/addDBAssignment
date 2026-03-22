@@ -45,15 +45,13 @@ def page2():
         return render_template('success/page2Success.html', gameName=game, gameYear=year, stars=fstar)
     return render_template('page2.html')
 
-@app.route('/page3', methods=['GET, POST'])
+@app.route('/page3', methods=['GET', 'POST'])
 def page3():
     if request.method == 'POST':
         name = request.form.get('name', '').strip()
         weapon = request.form.get('weapon', '').strip()
+        amount = request.form.getlist('fromAmount')
+        number = len(amount)
         playstyle = request.form.get('playstyle','').strip()
-        
-        # if not name or not weapon or not playstyle:
-        #     error = "Please fill in all required fields!"
-        #     return render_template('page3.html', error=error)
-        
-        return render_template('success/page3Success.html',name=name, weapon=weapon, playstyle=playstyle)
+        return render_template('success/page3Success.html',name=name, weapon=weapon, fromAmount=amount, fromNumber=number, playstyle=playstyle)
+    return render_template('page3.html')

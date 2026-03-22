@@ -1,42 +1,46 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 
 {% block content %}
 
-<h2>JJ's FromSoft Games Approval</h2>
+<h2>FromSoft Games Survey</h2>
 
 <form method="POST">
-    <div>
+<div>
         <label for="name">Name: </label>
-        <input type="text" id="name" id="name" required>
+        <input type="text" id="name" name="name" required>
     </div>
         <label for="fromAmount">Which FromSoft games have you played?</label>
     <div>
-        <input type="checkbox" name="fromAmount">Demon Souls</input>
+        <input type="checkbox" name="fromAmount" value="Demon Souls">Demon Souls</input>
     </div>
-        <input type="checkbox" name="fromAmount">Dark Souls 1</input>
-    </div>
-    <div>
-        <input type="checkbox" name="fromAmount">Dark Souls 2</input>
+        <input type="checkbox" name="fromAmount" value="Dark Souls 1">Dark Souls 1</input>
     </div>
     <div>
-        <input type="checkbox" name="fromAmount">Dark Souls 3</input>
+        <input type="checkbox" name="fromAmount" value="Dark Souls 2">Dark Souls 2</input>
     </div>
     <div>
-        <input type="checkbox" name="fromAmount">Bloodborne</input>
+        <input type="checkbox" name="fromAmount" value="Dark Souls 3">Dark Souls 3</input>
     </div>
+    <div>
+        <input type="checkbox" name="fromAmount" value="Bloodborne (best game ever made)">Bloodborne</input>
+    </div>
+    <div>
+        <input type="checkbox" name="fromAmount" value="Elden Ring">Elden Ring</input>
+    </div>
+</div>
     <div>
         <label for="weapon">Favorite Weapon: </label>
-        <input type="text" id="weapon" id="weapon" required>
+        <input type="text" id="weapon" name="weapon" required>
     </div>
     <div>
         <label for="playstyle">Favorite playstyle?</label>
         <select name="playstyle" id="playstyle">
             <option value="">What is your favorite playstyle in FromSoft games?</option>
-            <option value="str">Strength build</option>
-            <option value="dex">Dexterity build</option>
-            <option value="int">Intelligence build</option>
-            <option value="fth">Faith build</option>
-            <option value="hyb">Hybrid build</option>
+            <option value="STR Build">Strength build</option>
+            <option value="DEX Build">Dexterity build</option>
+            <option value="INT Build">Intelligence build</option>
+            <option value="FTH Build">Faith build</option>
+            <option value="HYB Build">Hybrid build</option>
         </select>
     </div>
 
