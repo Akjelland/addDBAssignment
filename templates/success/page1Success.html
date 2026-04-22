@@ -4,8 +4,13 @@
 <h1>Favorite Movie/TV Show</h1>
 <p>Your response has been "recorded"</p>
 <br/>
-<p>1. {{fmovie1 if fmovie1 else "you did not enter anything"}}</p>
-<p>2. {{fmovie2 if fmovie2 else "you did not enter anything"}}</p>
-<p>3. {{fmovie3 if fmovie3 else "you did not enter anything"}}</p>
+<div>
+    <p>{{id}}</p>
+    <p>1. {{movie1 if movie1 else "you did not enter anything"}}</p>
+    <p>2. {{movie2 if movie2 else "you did not enter anything"}}</p>
+    <p>3. {{movie3 if movie3 else "you did not enter anything"}}</p>
+
+</div>
 <a href="{{url_for('page1')}}">Submit another response</a>
+<a href="{{url_for('prevResp1')}}">View Previous Responses</a>
 {% endblock %}
